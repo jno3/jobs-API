@@ -2,7 +2,53 @@ POST http://localhost:5000/api/v1/auth/register HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "asdd",
-    "email": "a12dasd@gino.com",
-    "password": "1234567"
+    "name": "john",
+    "email": "john@gmail.com",
+    "password": "12345678"
 }
+
+###
+POST http://localhost:5000/api/v1/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "john@gmail.com",
+    "password": "12345678"
+}
+
+###
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNhZjEwZjg1MjI4ZWUyZTM1NDEwMzMiLCJuYW1lIjoiam9hbyIsImlhdCI6MTY2NDgwNzE5OCwiZXhwIjoxNjY3Mzk5MTk4fQ.3ZJkBkU6MZP55y65uzxKu45qHnTpOlso3IV4ni0vz3E
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNhZjVmYWFkMDMwNDY0MmI4NDU2ZWUiLCJuYW1lIjoiampqIiwiaWF0IjoxNjY0ODA4NDU2LCJleHAiOjE2Njc0MDA0NTZ9.f_qDpsAWyA3_X2H4crNMwRNSGo3SD8ll15HsLiiP0gE
+
+###
+POST http://localhost:5000/api/v1/jobs HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNiMmY2OTlhY2Y5NGUwM2I3ZDg1MmUiLCJuYW1lIjoiam9obiIsImlhdCI6MTY2NDgyMzE0OSwiZXhwIjoxNjY3NDE1MTQ5fQ.bmWi2NKb9LHKKYehjfS7zR3nzaNb5yCz77QCZ1EIle0
+
+{
+    "company": "time",
+    "position": "and time again"
+}
+###
+GET http://localhost:5000/api/v1/jobs HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNiMmY2OTlhY2Y5NGUwM2I3ZDg1MmUiLCJuYW1lIjoiam9obiIsImlhdCI6MTY2NDgyMzE0OSwiZXhwIjoxNjY3NDE1MTQ5fQ.bmWi2NKb9LHKKYehjfS7zR3nzaNb5yCz77QCZ1EIle0
+
+###
+GET http://localhost:5000/api/v1/jobs/633b2faa9acf94e03b7d8532 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNiMmY2OTlhY2Y5NGUwM2I3ZDg1MmUiLCJuYW1lIjoiam9obiIsImlhdCI6MTY2NDgyMzE0OSwiZXhwIjoxNjY3NDE1MTQ5fQ.bmWi2NKb9LHKKYehjfS7zR3nzaNb5yCz77QCZ1EIle0
+###
+PATCH http://localhost:5000/api/v1/jobs/633b2faa9acf94e03b7d8532 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNiMmY2OTlhY2Y5NGUwM2I3ZDg1MmUiLCJuYW1lIjoiam9obiIsImlhdCI6MTY2NDgyMzE0OSwiZXhwIjoxNjY3NDE1MTQ5fQ.bmWi2NKb9LHKKYehjfS7zR3nzaNb5yCz77QCZ1EIle0
+
+{
+    "company": "vivo",
+    "status": "finished"
+}
+633b2fc19acf94e03b7d8535
+###
+DELETE http://localhost:5000/api/v1/jobs/633b7dd9f4881798cc2c4989 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNiMmY2OTlhY2Y5NGUwM2I3ZDg1MmUiLCJuYW1lIjoiam9obiIsImlhdCI6MTY2NDgyMzE0OSwiZXhwIjoxNjY3NDE1MTQ5fQ.bmWi2NKb9LHKKYehjfS7zR3nzaNb5yCz77QCZ1EIle0
