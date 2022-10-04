@@ -1,10 +1,6 @@
 import User from '../models/User.js';
 import { StatusCodes } from 'http-status-codes';
-import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
 import { BadRequestError, UnauthenticatedError } from '../errors/index.js'
-dotenv.config();
-
 
 
 export const register = async (req, res) => {
